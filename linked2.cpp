@@ -1,4 +1,5 @@
 ///LINKED 2
+///subin sir er linked list niye youtube tutorial e valo vabe linked list niye bola ache
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -76,24 +77,28 @@ int main()
     if(n==1)
     {
         head=head->point;
+        free(temp);
     }
-    else if(n==2)
+    /*else if(n==2)
     {
         temp1=temp->point;
         temp1=temp1->point;
+        free(temp);
         temp->point=temp1;
-    }
+
+    }*/
     else
     {
         while(temp!=NULL)///deleting n'th position node from linked list
         {
             k++;
-            if(k==n-2)
+            if(k==n-1)
             {
-                temp=temp->point;
+                //temp=temp->point;
                 temp1=temp->point;
-                temp1=temp1->point;
-                temp->point=temp1;
+                //temp1=temp1->point;
+                temp->point=temp1->point;
+                free(temp1);
                 break;
             }
             temp=temp->point;

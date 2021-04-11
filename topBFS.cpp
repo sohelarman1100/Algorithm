@@ -1,6 +1,6 @@
 ///reference safayeter blog
-///ekhane string niye kaj kora hoyeche tai protiti unique string er jonno value fixed kora lageche jodi node
-///gulo int value hoy tahole ei value fixed er kaj lora lagbe na||
+///ekhane string niye kaj kora hoyeche tai protiti unique string er jonno value fixed kora legeche jodi node
+///gulo int value hoy tahole ei value fixed er kaj kora lagbe na||
 ///complexity O(n*n)
 #include<bits/stdc++.h>
 using namespace std;

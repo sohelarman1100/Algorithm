@@ -5,7 +5,7 @@ using namespace std;
 
 #define inf 2147483647
 
-vector<int>graph[100005],cost[100005];
+vector<int>graph[100005],cst[100005];
 int vis[100005];
 int dist[100005],parent[100005];
 int n,e;
@@ -53,9 +53,9 @@ void dijkstra(int source)
         {
             int v=graph[u][i];
 
-            if(dist[u] + cost[u][i] < dist[v])
+            if(dist[u] + cst[u][i] < dist[v])
             {
-                dist[v] = dist[u] + cost[u][i];
+                dist[v] = dist[u] + cst[u][i];
                 parent[v]=u;
                 q.push(node(v, dist[v]));
             }
@@ -72,8 +72,8 @@ int main()
         cin>>u>>v>>w;
         graph[u].push_back(v);
         graph[v].push_back(u);
-        cost[u].push_back(w);
-        cost[v].push_back(w);
+        cst[u].push_back(w);
+        cst[v].push_back(w);
     }
     dijkstra(1);
     int k;

@@ -4,7 +4,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 int vis[100005];
-int dis[100005];    /** Main application **/
+int dis[100005];
 vector<int>graph[100005];
 void make_graph(int u,int v)
 {

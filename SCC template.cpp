@@ -6,7 +6,7 @@ using namespace std;
 bool vis[100005];
 vector<int>graph[100005];
 vector<int>rgraph[100005];
-vector<int>comp[100005];
+vector<int>component[100005];
 stack<int>stk;
 void DFS1(int start)///ei dfs use hoyeche top sort korar jonno;
 {
@@ -22,7 +22,7 @@ void DFS1(int start)///ei dfs use hoyeche top sort korar jonno;
 void DFS2(int start,int x)
 {
     vis[start]=x;
-    comp[x].push_back(start);
+    component[x].push_back(start);
     for(int i=0 ; i<rgraph[start].size() ; i++)
     {
         int u=rgraph[start][i];
@@ -56,9 +56,9 @@ int main()
     for(i=1 ; i<=x ; i++)
     {
         printf("Component-%d : ",i);
-        for(j=0 ; j<comp[i].size() ; j++)
+        for(j=0 ; j<component[i].size() ; j++)
         {
-            printf("%d ",comp[i][j]);
+            printf("%d ",component[i][j]);
         }
         printf("\n");
     }

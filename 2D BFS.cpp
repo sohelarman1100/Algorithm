@@ -1,7 +1,5 @@
 /// 2D BFS
 
-/** Is a node discoverable or not ? **/
-
 #include<bits/stdc++.h>
 using namespace std;
 const int fx[] = {+1,-1,+0,+0};
